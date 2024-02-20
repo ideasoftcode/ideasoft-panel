@@ -1,14 +1,14 @@
-import Panel from "./pages/Panel";
+import Panel from "./panel.components/PanelContainer";
 
-import Header from "./panel.components/Header";
-import HeaderOption from "./panel.components/HeaderOption";
-import Sidebar from "./panel.components/Sidebar";
-import SidebarOption from "./panel.components/SidebarOption";
-import Main from "./panel.components/Main";
+import PanelHeader from "./panel.components/PanelHeader";
+import PanelHeaderOption from "./panel.components/PanelHeaderOption";
+import PanelSidebar from "./panel.components/PanelSidebar";
+import PanelSidebarOption from "./panel.components/PanelSidebarOption";
+import PanelMain from "./panel.components/PanelMain";
 
-import CrudHeader from "./crud.components/Header";
-import Table from "./crud.components/Table";
-import Form from "./crud.components/Form";
+import CrudHeader from "./crud.components/CrudHeader";
+import CrudTable from "./crud.components/CrudTable";
+import CrudForm from "./crud.components/CrudForm";
 
 import {
     InputFile,
@@ -17,7 +17,7 @@ import {
     InputSelect,
     InputText,
     InputTextarea,
-} from "./crud.components/Input";
+} from "./crud.components/CrudInputs";
 
 import Loading from "./components/Loading";
 
@@ -28,14 +28,14 @@ import usePagination from "./hooks/usePagination";
 
 export default {
     PanelContainer: Panel,
-    PanelHeader: Header,
-    PanelHeaderOption: HeaderOption,
-    PanelSidebar: Sidebar,
-    PanelSidebarOption: SidebarOption,
-    PanelMain: Main,
-    CrudHeader: CrudHeader,
-    CrudTable: Table,
-    CrudForm: Form,
+    PanelHeader,
+    PanelHeaderOption,
+    PanelSidebar,
+    PanelSidebarOption,
+    PanelMain,
+    CrudHeader,
+    CrudTable,
+    CrudForm,
     InputText,
     InputTextarea,
     InputRadio,

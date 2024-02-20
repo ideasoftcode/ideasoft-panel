@@ -19,7 +19,7 @@ type ButtonTypes = {
     onClick?: HTMLButtonElement["onclick"];
 };
 
-export default function Button({
+export default function CrudButton({
     children,
     text = null,
     icon = null,

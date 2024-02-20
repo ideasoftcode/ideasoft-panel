@@ -7,7 +7,7 @@ type SidebarProps = {
     isOpen?: boolean;
     src?: string;
 };
-export default function Sidebar({ children, className = "", isOpen, src }: SidebarProps) {
+export default function PanelSidebar({ children, className = "", isOpen, src }: SidebarProps) {
     return (
         <>
             <div

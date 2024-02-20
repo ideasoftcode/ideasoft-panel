@@ -12,7 +12,7 @@ type SidebarOptionProps = {
     href?: string;
     onClick?: (e: any) => void;
 };
-export default function SidebarOption({
+export default function PanelSidebarOption({
     path = "",
     name,
     icon = null,

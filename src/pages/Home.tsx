@@ -1,5 +1,5 @@
-import Form from "../crud.components/Form";
-import Header from "../crud.components/Header";
+import CrudForm from "../crud.components/CrudForm";
+import CrudHeader from "../crud.components/CrudHeader";
 import {
     InputFile,
     InputPassword,
@@ -7,15 +7,15 @@ import {
     InputSelect,
     InputText,
     InputTextarea,
-} from "../crud.components/Input";
-import Table from "../crud.components/Table";
+} from "../crud.components/CrudInputs";
+import CrudTable from "../crud.components/CrudTable";
 
 export default function Home() {
     return (
         <>
-            <Header />
-            <Table />
-            <Form>
+            <CrudHeader />
+            <CrudTable />
+            <CrudForm>
                 <InputRadio
                     title="Genero"
                     name="genero"
@@ -42,7 +42,7 @@ export default function Home() {
                     placeholder="Selecciona una foto"
                     accept="image/*"
                 />
-            </Form>
+            </CrudForm>
         </>
     );
 }

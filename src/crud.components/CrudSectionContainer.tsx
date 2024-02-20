@@ -1,6 +1,6 @@
 import { cls } from "../lib/utils";
 
-export default function SectionContainer({
+export default function CrudSectionContainer({
     children,
     classWrapper = "",
     classContainer = "",

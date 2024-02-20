@@ -10,7 +10,7 @@ type HeaderOptionProps = {
     to?: string;
     href?: string;
 };
-export default function HeaderOption({
+export default function PanelHeaderOption({
     icon = null,
     text,
     Tag = TagDefault,

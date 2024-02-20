@@ -12,7 +12,7 @@ type HeaderProps = {
     title?: string;
     username?: string;
 };
-export default function Header({
+export default function PanelHeader({
     children,
     className = "",
     isOpen = true,

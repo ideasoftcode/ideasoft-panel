@@ -1,21 +1,21 @@
 import styled from "styled-components";
-import SectionContainer from "./SectionContainer";
-import Button from "./Button";
 import { faPen, faTable, faTrash } from "@fortawesome/free-solid-svg-icons";
 
-import info from "./../mocks/table.json";
+import info from "../mocks/table.json";
 import { cls } from "../lib/utils";
 import usePagination from "../hooks/usePagination";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import CrudButton from "./CrudButton";
+import CrudSectionContainer from "./CrudSectionContainer";
 
-export default function Table() {
+export default function CrudTable() {
     const { options, itemPages, rows, handleChangeItemsPerPage } = usePagination({
         rows: info,
         options: [5, 10, 20, 50, 100],
     });
 
     return (
-        <SectionContainer classWrapper="w-full" classContainer="flex flex-col gap-3">
+        <CrudSectionContainer classWrapper="w-full" classContainer="flex flex-col gap-3">
             <TableHeader onChangeItemsPerPage={handleChangeItemsPerPage} options={options} />
             <table className="w-full text-center">
                 <Thead>
@@ -33,7 +33,7 @@ export default function Table() {
                 </Tbody>
             </table>
             <TableFooter items={itemPages} />
-        </SectionContainer>
+        </CrudSectionContainer>
     );
 }
 
@@ -114,7 +114,7 @@ function TableFooter({ items }: any) {
 
 function PaginationButton({ disabled = false, ...props }) {
     return (
-        <Button
+        <CrudButton
             classWrapper={cls("aspect-square w-6 h-6", {
                 "opacity-50": disabled,
             })}
@@ -137,8 +137,8 @@ function Row({ ...item }) {
             <td>{item.email}</td>
             <td>
                 <div className="flex justify-center gap-1">
-                    <Button icon={faPen} small />
-                    <Button icon={faTrash} small theme="danger" />
+                    <CrudButton icon={faPen} small />
+                    <CrudButton icon={faTrash} small theme="danger" />
                 </div>
             </td>
         </tr>

@@ -5,7 +5,7 @@ type props = {
     classWrapper?: string;
 };
 
-export default function Main({ children, classWrapper = "" }: props) {
+export default function PanelMain({ children, classWrapper = "" }: props) {
     return (
         <div className={cls("flex flex-col gap-5 p-3 sm:p-5 md:p-10", classWrapper)}>
             {children}

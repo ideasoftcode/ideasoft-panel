@@ -1,9 +1,5 @@
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import Main from "./panel.components/Main";
-import Sidebar from "./panel.components/Sidebar";
-import SidebarOption from "./panel.components/SidebarOption";
 import usePanel from "./hooks/usePanel";
-import Panel from "./pages/Panel";
 import {
     faContactBook,
     faHome,
@@ -11,33 +7,40 @@ import {
     faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import Home from "./pages/Home";
-import HeaderOption from "./panel.components/HeaderOption";
-import Header from "./panel.components/Header";
 import Other from "./pages/Other";
+import PanelContainer from "./panel.components/PanelContainer";
+import PanelHeader from "./panel.components/PanelHeader";
+import PanelMain from "./panel.components/PanelMain";
+import PanelHeaderOption from "./panel.components/PanelHeaderOption";
+import PanelSidebar from "./panel.components/PanelSidebar";
+import PanelSidebarOption from "./panel.components/PanelSidebarOption";
 
 export default function App() {
     const { isOpen, isMobile, togle, handleClickOption } = usePanel();
     return (
-        <Panel sidebarIsOpen={isOpen} isMobile={isMobile}>
+        <PanelContainer sidebarIsOpen={isOpen} isMobile={isMobile}>
             <BrowserRouter>
-                <Header
+                <PanelHeader
                     title="Ideasoft Panel"
                     username="Harold Anderson Hernández Zambrano"
                     src="https://avatars.githubusercontent.com/u/77129645?v=4"
                     isOpen={isOpen}
                     togleOpen={togle}
                 >
-                    <HeaderOption Tag={Link} to="/profile" text="Perfil" icon={faUser} />
-                    <HeaderOption
+                    <PanelHeaderOption Tag={Link} to="/profile" text="Perfil" icon={faUser} />
+                    <PanelHeaderOption
                         Tag={Link}
                         to="/logout"
                         text="Cerrar Sesión"
                         icon={faRightFromBracket}
                         logout
                     />
-                </Header>
-                <Sidebar isOpen={isOpen} src="https://avatars.githubusercontent.com/u/77129645?v=4">
-                    <SidebarOption
+                </PanelHeader>
+                <PanelSidebar
+                    isOpen={isOpen}
+                    src="https://avatars.githubusercontent.com/u/77129645?v=4"
+                >
+                    <PanelSidebarOption
                         Tag={Link}
                         path="/"
                         name="Home"
@@ -45,7 +48,7 @@ export default function App() {
                         isOpen={isOpen}
                         onClick={handleClickOption}
                     />
-                    <SidebarOption
+                    <PanelSidebarOption
                         Tag={Link}
                         path="/other"
                         name="Other"
@@ -53,14 +56,14 @@ export default function App() {
                         isOpen={isOpen}
                         onClick={handleClickOption}
                     />
-                </Sidebar>
-                <Main>
+                </PanelSidebar>
+                <PanelMain>
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/other" element={<Other />} />
                     </Routes>
-                </Main>
+                </PanelMain>
             </BrowserRouter>
-        </Panel>
+        </PanelContainer>
     );
 }

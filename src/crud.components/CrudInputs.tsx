@@ -2,7 +2,7 @@ import { cls } from "../lib/utils";
 import { faCheck, faEye, faEyeSlash, faFile } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import Button from "./Button";
+import CrudButton from "./CrudButton";
 
 type InputTextTypes = WrapperTypes & {
     name: string;
@@ -75,7 +75,7 @@ export function InputPassword({
                     placeholder={placeholder}
                     className="w-full h-full outline-none text-lg py-1 px-5 rounded-sm"
                 />
-                <Button
+                <CrudButton
                     type="button"
                     theme="info"
                     classWrapper="rounded-sm"
