@@ -1,8 +1,10 @@
 {
     "name": "ideasoft-panel",
     "private": false,
-    "version": "0.0.1",
+    "version": "0.0.1-rc2",
     "type": "module",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts",
     "keywords": [
         "react",
         "vite",
@@ -12,9 +14,9 @@
         "fontawesome"
     ],
     "license": "MIT",
-    "homepage": "TODO",
+    "homepage": "https://github.com/ideasoftcode/ideasoft-panel.git",
     "repository": {
-        "url": "TODO",
+        "url": "https://github.com/ideasoftcode/ideasoft-panel.git",
         "type": "git"
     },
     "files": [
@@ -47,7 +49,6 @@
         "tailwind-merge": "2.2.1"
     },
     "devDependencies": {
-        "react-dom": "18.2.0",
         "@types/react": "18.2.57",
         "@types/react-dom": "18.2.19",
         "@vitejs/plugin-react-swc": "3.5.0",
@@ -57,6 +58,8 @@
         "eslint-plugin-react-hooks": "4.6.0",
         "eslint-plugin-react-refresh": "0.4.5",
         "postcss": "8.4.35",
+        "react-dom": "18.2.0",
+        "react-router-dom": "6.22.1",
         "tailwindcss": "3.4.1",
         "typescript": "5.3.3",
         "vite": "5.1.0"
