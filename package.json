@@ -1,0 +1,64 @@
+{
+    "name": "ideasoft-panel",
+    "private": false,
+    "version": "0.0.1",
+    "type": "module",
+    "keywords": [
+        "react",
+        "vite",
+        "tailwindcss",
+        "styled-components",
+        "framer-motion",
+        "fontawesome"
+    ],
+    "license": "MIT",
+    "homepage": "TODO",
+    "repository": {
+        "url": "TODO",
+        "type": "git"
+    },
+    "files": [
+        "dist/"
+    ],
+    "release": {
+        "branches": [
+            "main"
+        ]
+    },
+    "peerDependencies": {
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
+    },
+    "scripts": {
+        "lan": "vite --host",
+        "dev": "vite",
+        "build": "tsc",
+        "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "6.5.1",
+        "@fortawesome/free-brands-svg-icons": "6.5.1",
+        "@fortawesome/free-solid-svg-icons": "6.5.1",
+        "@fortawesome/react-fontawesome": "0.2.0",
+        "clsx": "2.1.0",
+        "framer-motion": "11.0.5",
+        "styled-components": "6.1.8",
+        "tailwind-merge": "2.2.1"
+    },
+    "devDependencies": {
+        "react-dom": "18.2.0",
+        "@types/react": "18.2.57",
+        "@types/react-dom": "18.2.19",
+        "@vitejs/plugin-react-swc": "3.5.0",
+        "autoprefixer": "10.4.17",
+        "eslint": "8.56.0",
+        "eslint-plugin-react": "7.33.2",
+        "eslint-plugin-react-hooks": "4.6.0",
+        "eslint-plugin-react-refresh": "0.4.5",
+        "postcss": "8.4.35",
+        "tailwindcss": "3.4.1",
+        "typescript": "5.3.3",
+        "vite": "5.1.0"
+    }
+}
