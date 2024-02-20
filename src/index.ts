@@ -21,6 +21,11 @@ import {
 
 import Loading from "./components/Loading";
 
+// hooks
+
+import usePanel from "./hooks/usePanel";
+import usePagination from "./hooks/usePagination";
+
 export default {
     PanelContainer: Panel,
     PanelHeader,
@@ -38,4 +43,7 @@ export default {
     InputSelect,
     InputFile,
     Loading,
+    // hooks
+    usePanel,
+    usePagination,
 };
