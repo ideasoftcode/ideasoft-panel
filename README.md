@@ -84,45 +84,43 @@ export default function App() {
     const { isOpen, isMobile, togle, handleClickOption } = usePanel();
     return (
         <Panel sidebarIsOpen={isOpen} isMobile={isMobile}>
-            <BrowserRouter>
-                <Header
-                    title="Ideasoft Panel"
-                    username="Harold Anderson Hernández Zambrano"
-                    src="https://avatars.githubusercontent.com/u/77129645?v=4"
+            <Header
+                title="Ideasoft Panel"
+                username="Harold Anderson Hernández Zambrano"
+                src="https://avatars.githubusercontent.com/u/77129645?v=4"
+                isOpen={isOpen}
+                togleOpen={togle}
+            >
+                <HeaderOption Tag={Link} to="/profile" text="Perfil" icon={faUser} />
+                <HeaderOption
+                    Tag={Link}
+                    to="/logout"
+                    text="Cerrar Sesión"
+                    icon={faRightFromBracket}
+                    logout
+                />
+            </Header>
+            <Sidebar isOpen={isOpen} src="https://avatars.githubusercontent.com/u/77129645?v=4">
+                <SidebarOption
+                    Tag={Link}
+                    path="/"
+                    name="Home"
+                    icon={faHome}
                     isOpen={isOpen}
-                    togleOpen={togle}
-                >
-                    <HeaderOption Tag={Link} to="/profile" text="Perfil" icon={faUser} />
-                    <HeaderOption
-                        Tag={Link}
-                        to="/logout"
-                        text="Cerrar Sesión"
-                        icon={faRightFromBracket}
-                        logout
-                    />
-                </Header>
-                <Sidebar isOpen={isOpen} src="https://avatars.githubusercontent.com/u/77129645?v=4">
-                    <SidebarOption
-                        Tag={Link}
-                        path="/"
-                        name="Home"
-                        icon={faHome}
-                        isOpen={isOpen}
-                        onClick={handleClickOption}
-                    />
-                    <SidebarOption
-                        Tag={Link}
-                        path="/other"
-                        name="Other"
-                        icon={faContactBook}
-                        isOpen={isOpen}
-                        onClick={handleClickOption}
-                    />
-                </Sidebar>
-                <Main>
-                    <YourComponent />
-                </Main>
-            </BrowserRouter>
+                    onClick={handleClickOption}
+                />
+                <SidebarOption
+                    Tag={Link}
+                    path="/other"
+                    name="Other"
+                    icon={faContactBook}
+                    isOpen={isOpen}
+                    onClick={handleClickOption}
+                />
+            </Sidebar>
+            <Main>
+                <YourComponent />
+            </Main>
         </Panel>
     );
 }

@@ -1,3 +1,5 @@
+import Panel from "./pages/Panel";
+
 import PanelHeader from "./panel.components/Header";
 import PanelHeaderOption from "./panel.components/HeaderOption";
 import PanelSidebar from "./panel.components/Sidebar";
@@ -20,6 +22,7 @@ import {
 import Loading from "./components/Loading";
 
 export default {
+    PanelContainer: Panel,
     PanelHeader,
     PanelHeaderOption,
     PanelSidebar,
