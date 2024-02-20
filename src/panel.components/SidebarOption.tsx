@@ -21,7 +21,7 @@ export default function SidebarOption({
     isActive = false,
     ...props
 }: SidebarOptionProps) {
-    const _isActive = isActive || window.location.pathname === path;
+    const _isActive = isActive ? isActive : window.location.pathname === path;
     return (
         <Tag
             className={cls(
