@@ -1,4 +1,3 @@
-import { useLocation } from "react-router-dom";
 import { cls } from "../lib/utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -8,6 +7,7 @@ type SidebarOptionProps = {
     icon?: any;
     Tag?: any;
     isOpen?: boolean;
+    isActive?: boolean;
     to?: string;
     href?: string;
     onClick?: (e: any) => void;
@@ -18,9 +18,10 @@ export default function SidebarOption({
     icon = null,
     Tag = DefaultTag,
     isOpen = true,
+    isActive = false,
     ...props
 }: SidebarOptionProps) {
-    let isActive = useLocation().pathname == path;
+    const _isActive = isActive || window.location.pathname === path;
     return (
         <Tag
             className={cls(
@@ -38,7 +39,7 @@ export default function SidebarOption({
                 className={cls(
                     "absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-0 h-0 opacity-0 bg-[--c1-bg] rounded-sm transition-[width,height,opacity] duration-200 group-hover/button:w-full group-hover/button:h-full group-hover/button:opacity-100",
                     {
-                        "w-full h-full opacity-50 group-hover/button:opacity-50": isActive,
+                        "w-full h-full opacity-50 group-hover/button:opacity-50": _isActive,
                     }
                 )}
             />
